@@ -7,14 +7,6 @@ echo "`8bo.   88ooo88 88ooo88 88V8o 88 88   88  `8bd8'  "
 echo "  `Y8b. 88~~~88 88~~~88 88 V8o88 88   88    88    "
 echo "db   8D 88   88 88   88 88  V888 88  .8D    88    "
 echo "`8888Y' YP   YP YP   YP VP   V8P Y8888D'    YP    "
-echo "                                                   "
-echo "                                                   "
-echo "                                                   "
-echo "                                                   "
-echo "                                                   "
-echo "                                                   "
-echo "                                                   "
-
 
 # Memeriksa apakah Docker sudah terinstal
 if ! command -v docker &> /dev/null; then
