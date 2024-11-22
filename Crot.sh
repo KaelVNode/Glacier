@@ -20,13 +20,13 @@ echo "                                                   "
 echo "                                                   "
 echo "                                                   "
 
-
 # Memeriksa apakah Docker sudah terinstal
-if ! command -v docker &> /dev/null; then
+if command -v docker &> /dev/null; then
+    echo "Docker sudah terinstal. Melewati proses instalasi."
+else
     echo "Docker tidak terinstal. Memulai proses instalasi..."
 
-    # Memperbarui paket dan menginstal dependensi
-    sudo apt-get update -y
+    # Menginstal dependensi
     sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
     # Menambahkan GPG key resmi Docker
@@ -35,8 +35,7 @@ if ! command -v docker &> /dev/null; then
     # Menambahkan repository Docker
     echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-    # Memperbarui paket dan menginstal Docker
-    sudo apt-get update -y
+    # Menginstal Docker
     sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
     # Memeriksa apakah instalasi Docker berhasil
@@ -45,8 +44,6 @@ if ! command -v docker &> /dev/null; then
         exit 1
     fi
     echo "Docker berhasil diinstal."
-else
-    echo "Docker sudah terinstal. Melewati proses instalasi."
 fi
 
 # Memeriksa apakah container 'glacier-verifier' sudah ada
