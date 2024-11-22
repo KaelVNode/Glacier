@@ -1,14 +1,20 @@
 #!/bin/bash
 
 # Menampilkan ASCII art untuk "Saandy"
-echo "    _____                _   _       _     "
-echo "   / ____|              | | (_)     | |    "
-echo "  | (___   ___ _ __ ___ | |_ _  __ _| |__  "
-echo "   \___ \ / _ \ '_ \` _ \| __| |/ _\` | '_ \ "
-echo "   ____) |  __/ | | | | | |_| | (_| | | | |"
-echo "  |_____/ \___|_| |_| |_|\__|_|\__,_|_| |_|"
-echo "                                         "
-echo "                                        "
+echo ".d8888.  .d8b.   .d8b.  d8b   db d8888b. db    db "
+echo "88'  YP d8' `8b d8' `8b 888o  88 88  `8D `8b  d8' "
+echo "`8bo.   88ooo88 88ooo88 88V8o 88 88   88  `8bd8'  "
+echo "  `Y8b. 88~~~88 88~~~88 88 V8o88 88   88    88    "
+echo "db   8D 88   88 88   88 88  V888 88  .8D    88    "
+echo "`8888Y' YP   YP YP   YP VP   V8P Y8888D'    YP    "
+echo "                                                   "
+echo "                                                   "
+echo "                                                   "
+echo "                                                   "
+echo "                                                   "
+echo "                                                   "
+echo "                                                   "
+
 
 # Memeriksa apakah Docker sudah terinstal
 if ! command -v docker &> /dev/null; then
